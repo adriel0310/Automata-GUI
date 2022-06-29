@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DFA : MonoBehaviour
+public class DFA_Incomplete : MonoBehaviour
 {
     string user_input = "ba";
 
