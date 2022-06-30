@@ -9,7 +9,7 @@ public class DFA : MonoBehaviour
      */
 
     //Variable for storing user input
-    string user_input = "ba";
+    string user_input = "babbaaababab";
 
     void transition_state(string user_input)
     {
