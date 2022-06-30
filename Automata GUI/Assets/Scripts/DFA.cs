@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DFA_Incomplete : MonoBehaviour
+public class DFA : MonoBehaviour
 {
-    string user_input = "ba";
+    string user_input = "aababbababbbaabbaab";
 
     void transition_state(string user_input)
     {
@@ -81,7 +81,7 @@ public class DFA_Incomplete : MonoBehaviour
                     if (user_input[cursor] == 'a')
                     {
                         cursor++;
-                        goto case 6;
+                        goto case 4;
                     }
                     else if (user_input[cursor] == 'b')
                     {
@@ -95,6 +95,7 @@ public class DFA_Incomplete : MonoBehaviour
                     }
                 case 5:
                     Debug.Log("State 6");
+                    //Debug.Log("Cursor: " + cursor);
                     if (user_input[cursor] == 'a')
                     {
                         cursor++;
@@ -124,15 +125,19 @@ public class DFA_Incomplete : MonoBehaviour
                     }
                 case 7:
                     Debug.Log("State 8");
-                    if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor < user_input.Length)
+                    if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor < user_input.Length - 1)
                     {
                         cursor++;
-                        break;
+                        //Debug.Log("Continue");
+                        //Debug.Log("Cursor value: " + user_input[19]);
+                        //Debug.Log("Cursor: " + cursor);
+                        //Debug.Log("String Length: " + user_input.Length);
+                        goto case 7;
                     }
-                    else if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor >= user_input.Length)
+                    else if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor == user_input.Length - 1)
                     {
                         Debug.Log("Valid");
-                        break;
+                        return;
                     }
                     else
                     {
