@@ -9,7 +9,7 @@ public class DFA : MonoBehaviour
      */
 
     //Variable for storing user input
-    string user_input = "bgggggg";
+    string user_input = "abaabbaaab";
 
     void transition_state(string user_input)
     {
@@ -205,7 +205,7 @@ public class DFA : MonoBehaviour
                     else
                     {
                         Debug.Log("Invalid 7");
-                        return;
+                        break;
                     }
                 default:
                     Debug.Log("Invalid End");
