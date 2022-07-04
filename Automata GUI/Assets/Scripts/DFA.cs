@@ -45,14 +45,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 Debug.Log("Invalid 0");
-                                ValidityCheck.text = "Invalid 0";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 0 outside");
-                            ValidityCheck.text = "Invalid 0 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 1:
@@ -73,14 +73,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 1");
-                                ValidityCheck.text = "Invalid 1";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 1 outside");
-                            ValidityCheck.text = "Invalid 1 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 2:
@@ -96,14 +96,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 2");
-                                ValidityCheck.text = "Invalid 2";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 2 outside");
-                            ValidityCheck.text = "Invalid 2 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 3:
@@ -124,14 +124,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 3");
-                                ValidityCheck.text = "Invalid 3";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 3 outside");
-                            ValidityCheck.text = "Invalid 3 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 4:
@@ -152,14 +152,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 4");
-                                ValidityCheck.text = "Invalid 4";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 4 outside");
-                            ValidityCheck.text = "Invalid 4 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 5:
@@ -180,14 +180,14 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 5");
-                                ValidityCheck.text = "Invalid 5";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
                             //Debug.Log("Invalid 5 outside");
-                            ValidityCheck.text = "Invalid 5 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 6:
@@ -203,7 +203,7 @@ public class DFA : MonoBehaviour
                             else
                             {
                                 //Debug.Log("Invalid 6");
-                                ValidityCheck.text = "Invalid 6";
+                                ValidityCheck.text = "Invalid";
                                 
                                 return;
                             }
@@ -211,7 +211,7 @@ public class DFA : MonoBehaviour
                         else
                         {
                             //Debug.Log("Invalid 6 outside");
-                            ValidityCheck.text = "Invalid 6 outside";
+                            ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 7:
@@ -226,7 +226,7 @@ public class DFA : MonoBehaviour
                             }
                             else
                             {
-                                ValidityCheck.text = "Invalid 7";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
@@ -241,7 +241,7 @@ public class DFA : MonoBehaviour
                             }
                             else
                             {
-                                ValidityCheck.text = "Invalid 7";
+                                ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
@@ -259,7 +259,299 @@ public class DFA : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    
+// ITEM 2 
+    public void transition_state_number(string user_input)
+    {
+        if(detectToggle.Toggle2.isOn)
+        {
+            user_input = user_Input.text;
+        
+            int cursor = 0;
+         foreach (char x in user_input)
+            {
+             switch (cursor)
+             {
+                 case 0:
+                     Debug.Log("Initial State");
+                     if (cursor < user_input.Length - 1)
+                     {
+
+                          if (user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 1;
+                            }
+                            else if (user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 2;
+                            }
+                            else
+                            {
+                                Debug.Log("Invalid 0");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 0 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 1:
+                        Debug.Log("State 2");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 4;
+                            }
+                            else if (user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 3;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 1");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 1 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 2:
+                        Debug.Log("State 3");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '0' )
+                            {
+                                cursor++;
+                                goto case 3;
+                            }
+
+                            else if(user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 4; 
+                            }
+
+                            else
+                            {
+                                //Debug.Log("Invalid 2");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 2 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 3:
+                        Debug.Log("State 4");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1' || user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 4;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 3");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 3 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 4:
+                        Debug.Log("State 5");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 5;
+                            }
+                            else if (user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 6;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 4");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 4 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 5:
+                        Debug.Log("State 6");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 7;
+                            }
+                            else if (user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 6;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 5");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 5 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 6:
+                        Debug.Log("State 7");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1')
+                            {
+                                cursor++;
+                                goto case 5;
+                            }
+                            if (user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 7;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 6");
+                                ValidityCheck.text = "Invalid";
+                                
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 6 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+                    case 7:
+                        Debug.Log("State 8");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1' || user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 8;
+                            }
+                            else
+                            {
+                                //Debug.Log("Invalid 6");
+                                ValidityCheck.text = "Invalid";
+                                
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            //Debug.Log("Invalid 6 outside");
+                            ValidityCheck.text = "Invalid";
+                            return;
+                        }
+
+                    case 8:
+                        Debug.Log("State 9");
+                        if (cursor < user_input.Length - 1)
+                        {
+
+                            if (user_input[cursor] == '1' || user_input[cursor] == '0')
+                            {
+                                cursor++;
+                                goto case 8;
+                            }
+                            else
+                            {
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        else if (cursor == user_input.Length - 1)
+                        {
+                            if (user_input[cursor] == '1' || user_input[cursor] == '0')
+                            {
+                                ValidityCheck.text = "Valid";
+                                Debug.Log("Cursor: " + cursor);
+                                //Debug.Log("Valid");
+                                return;
+                            }
+                            else
+                            {
+                                ValidityCheck.text = "Invalid";
+                                return;
+                            }
+                        }
+                        break;
+                    default:
+                        //Debug.Log("Invalid End");
+                        ValidityCheck.text = "Invalid End";
+                        break;
+                }
+            }
+        } 
+        else
+        {
+            Debug.Log("Please Click On a Toggle");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      void Start()
      {
          //transition_state(user_input);
