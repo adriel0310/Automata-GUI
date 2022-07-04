@@ -216,22 +216,32 @@ public class DFA : MonoBehaviour
                         }
                     case 7:
                         Debug.Log("State 8");
-                        if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length - 1)
                         {
-                            cursor++;
-                            goto case 7;
-                        }
-                        else if (user_input[cursor] == 'a' || user_input[cursor] == 'b' && cursor == user_input.Length - 1)
-                        {
-                        
-                            ValidityCheck.text = "Valid";
-                            //Debug.Log("Valid");
-                            return;
+
+                            if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
+                            {
+                                cursor++;
+                                goto case 7;
+                            }
+                            else if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
+                            {
+
+                                ValidityCheck.text = "Valid";
+                                //Debug.Log("Valid");
+                                return;
+                            }
+                            else
+                            {
+                                ValidityCheck.text = "Invalid 7";
+                                break;
+                            }
                         }
                         else
                         {
-                            ValidityCheck.text = "Invalid 7";
-                            break;
+                            //Debug.Log("Invalid 7 outside");
+                            ValidityCheck.text = "Invalid 7 outside";
+                            return;
                         }
                     default:
                         //Debug.Log("Invalid End");
