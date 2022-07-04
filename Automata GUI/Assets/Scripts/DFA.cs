@@ -224,25 +224,28 @@ public class DFA : MonoBehaviour
                                 cursor++;
                                 goto case 7;
                             }
-                            else if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
+                            else
                             {
-
+                                ValidityCheck.text = "Invalid 7";
+                                return;
+                            }
+                        }
+                        else if (cursor == user_input.Length - 1)
+                        {
+                            if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
+                            {
                                 ValidityCheck.text = "Valid";
+                                Debug.Log("Cursor: " + cursor);
                                 //Debug.Log("Valid");
                                 return;
                             }
                             else
                             {
                                 ValidityCheck.text = "Invalid 7";
-                                break;
+                                return;
                             }
                         }
-                        else
-                        {
-                            //Debug.Log("Invalid 7 outside");
-                            ValidityCheck.text = "Invalid 7 outside";
-                            return;
-                        }
+                        break;
                     default:
                         //Debug.Log("Invalid End");
                         ValidityCheck.text = "Invalid End";
