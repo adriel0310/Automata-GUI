@@ -23,7 +23,7 @@ public class CFGButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        givenText();
     }
 
     public void givenText(){

@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9764151, b: 0.9764151, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3959,101 +3959,30 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Automata GUI is a compiler that displays the following:
-
-    - Regular
-    Expression (RegEx)
-
-    - Context Free Grammar (CFG)
-
-    - Definite Finite Automaton
-    (DFA)
-
-    - Pushdown Automata (PDA) of the following given:
-
-    1.) ( b + aa
-    + ab ) ( a + b )* ( bb + aba + ab )* ( aaa + bbb ) ( a + b ) ( a + b + ab )*
-
-    2.)
-    ( 1 + 0 )* (11 + 00 + 101 + 010) ( 1 + 0 + 11 + 00 + 101 )* ( 11 + 00 ) ( 11+
-    00 + 101 )* ( 1 + 0 ) ( 1 + 0 + 11 )*
-
-
-
-    HOW TO USE:
-
-
-    1. To validate
-    inputs for Regular Expression
-
-    - Choose a given first.
-
-    - Once the User
-    has chosen a given, click on the textbox in the middle and input the string the
-    User wants to validate.
-
-    - Click execute to validate. If valid, the compiler
-    will indicate valid, otherwise it will indicate invalid in the text beside the
-    textbox
-
-
-    2. To view Definite Finite Automata
-
-    - Choose a given first.
-
-    -
-    Once the User has chosen the given, click on the DFA button located below the
-    given.
-
-    - Once it has been clicked, the DFA of the given will be displayed.
-
-
-    3.
-    To view the Context-Free Grammar
-
-    - Choose a given first.
-
-    - Once the
-    User has chosen the given, click on the CFG button located below the given.
-
-    -
-    Once it has been clicked, the CFG of the given will be displayed.
-
-
-    4. To
-    view the Pushdown Automata
-
-    - Choose a given first.
-
-    - Once the User
-    has chosen the given, click on the PDA button located below the given.
-
-    -
-    Once it has been clicked, the PDA of the given will be displayed.
-
-
-    WARNING:
-
-    -
-    Before allowing the user to interact with any other part of the program, the
-    program will ask the user to choose again if they fail to make a required selection.
-
-    -
-    The user must click the corresponding buttons for DFA, CFG, and PDA again depending
-    on which of those they want to view in order to view the DFA, CFG, and PDA of
-    the various given items when switching from one given to another.
-
-
-    Compiler
-    made by:
-
-    Janna Arcullo
-
-    Ivan Avelino
-
-    Adriel Grafilo
-
-    Jose Javier'
+  m_Text: "Automata GUI is a compiler that displays the following:\n- Regular Expression
+    (RegEx)\n- Context Free Grammar (CFG)\n- Definite Finite Automaton (DFA)\n- Pushdown
+    Automata (PDA) of the following given:\n1.) ( b + aa + ab ) ( a + b )* ( bb +
+    aba + ab )* ( aaa + bbb ) ( a + b ) ( a + b + ab )*\n2.) ( 1 + 0 )* (11 + 00
+    + 101 + 010) ( 1 + 0 + 11 + 00 + 101 )* ( 11 + 00 ) ( 11+ 00 + 101 )* ( 1 + 0
+    ) ( 1 + 0 + 11 )*\n\n\nHOW TO USE:\n\n1. To validate inputs for Regular Expression\n-
+    Choose a given first.\n- Once the User has chosen a given, click on the textbox
+    in the middle and input the string the User wants to validate.\n- Click execute
+    to validate. If valid, the compiler will indicate valid, otherwise it will indicate
+    invalid in the text beside the textbox.    \n\n2. To view Definite Finite Automata\n-
+    Choose a given first.\n- Once the User has chosen the given, click on the DFA
+    button located below the given.\n- Once it has been clicked, the DFA of the given
+    will be displayed.\n\n3. To view the Context-Free Grammar\n- Choose a given first.\n-
+    Once the User has chosen the given, click on the CFG button located below the
+    given.\n- Once it has been clicked, the CFG of the given will be displayed.\n\n4.
+    To view the Pushdown Automata\n- Choose a given first.\n- Once the User has chosen
+    the given, click on the PDA button located below the given.\n- Once it has been
+    clicked, the PDA of the given will be displayed.\n\nWARNING:\n- Before allowing
+    the user to interact with any other part of the program, the program will ask
+    the user to choose again if they fail to make a required selection.\n- The user
+    must click the corresponding buttons for DFA, CFG, and PDA again depending on
+    which of those they want to view in order to view the DFA, CFG, and PDA of the
+    various given items when switching from one given to another.\n\nCompiler made
+    by:\nJanna Arcullo\nIvan Avelino\nAdriel Grafilo\nJose Javier"
 --- !u!222 &969132168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4654,7 +4583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15222931, g: 1, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4748,7 +4677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6100,7 +6029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1287843461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6208,7 +6137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7067,7 +6996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7810,7 +7739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

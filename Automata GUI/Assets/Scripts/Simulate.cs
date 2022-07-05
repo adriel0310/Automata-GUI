@@ -321,16 +321,17 @@ public class Simulate : MonoBehaviour
                      Debug.Log("Initial State");
                      if (cursor < user_input.Length - 1)
                      {
+                         StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
 
                           if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
+                                StartCoroutine(DelayAnimation(2,Animate2,"DFA2S2",FadeState));
                                 cursor++;
                                 goto case 1;
                             }
                             else if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
+                                StartCoroutine(DelayAnimation(2,Animate3,"DFA3S2",FadeState));
                                 cursor++;
                                 goto case 2;
                             }
@@ -354,13 +355,13 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(2,Animate2,"DFA2S2",FadeState));
+                                StartCoroutine(DelayAnimation(3,Animate5,"DFA5S2",FadeState));
                                 cursor++;
                                 goto case 4;
                             }
                             else if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(2,Animate2,"DFA2S2",FadeState));
+                                StartCoroutine(DelayAnimation(3,Animate4,"DFA4S2",FadeState));
                                 cursor++;
                                 goto case 3;
                             }
@@ -382,16 +383,16 @@ public class Simulate : MonoBehaviour
                         if (cursor < user_input.Length - 1)
                         {
 
-                            if (user_input[cursor] == '0' )
+                            if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(3,Animate3,"DFA3S2",FadeState));
+                                StartCoroutine(DelayAnimation(4,Animate4,"DFA4S2",FadeState));
                                 cursor++;
                                 goto case 3;
                             }
 
                             else if(user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(3,Animate3,"DFA3S2",FadeState));
+                                StartCoroutine(DelayAnimation(4,Animate5,"DFA5S2",FadeState));
                                 cursor++;
                                 goto case 4; 
                             }
@@ -416,7 +417,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(4,Animate4,"DFA4S2",FadeState));
+                                StartCoroutine(DelayAnimation(5,Animate5,"DFA5S2",FadeState));
                                 cursor++;
                                 goto case 4;
                             }
@@ -440,13 +441,13 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(5,Animate5,"DFA5S2",FadeState));
+                                StartCoroutine(DelayAnimation(6,Animate6,"DFA6S2",FadeState));
                                 cursor++;
                                 goto case 5;
                             }
                             else if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(5,Animate5,"DFA5S2",FadeState));
+                                StartCoroutine(DelayAnimation(6,Animate7,"DFA7S2",FadeState));
                                 cursor++;
                                 goto case 6;
                             }
@@ -470,7 +471,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(6,Animate6,"DFA6S2",FadeState));
+                                StartCoroutine(DelayAnimation(7,Animate8,"DFA8S2",FadeState));
                                 cursor++;
                                 goto case 7;
                             }
@@ -506,7 +507,7 @@ public class Simulate : MonoBehaviour
                             }
                             if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(9,Animate7,"DFA7S2",FadeState));
+                                StartCoroutine(DelayAnimation(9,Animate8,"DFA8S2",FadeState));
                                 cursor++;
                                 goto case 7;
                             }
@@ -531,7 +532,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(10,Animate8,"DFA8S2",FadeState));
+                                StartCoroutine(DelayAnimation(10,Animate9,"DFA9S2",FadeState));
                                 cursor++;
                                 goto case 8;
                             }
@@ -573,7 +574,7 @@ public class Simulate : MonoBehaviour
                             {
                                 StartCoroutine(DelayAnimation(11,Animate9,"DFA9S2",FadeState));
                                 //ValidityCheck.text = "Valid";
-                                Debug.Log("Cursor: " + cursor);
+                                //Debug.Log("Cursor: " + cursor);
                                 //Debug.Log("Valid");
                                 return;
                             }
