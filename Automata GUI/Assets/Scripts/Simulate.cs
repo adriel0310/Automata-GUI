@@ -30,7 +30,7 @@ public class Simulate : MonoBehaviour
     public Animator Animate8;
     public Animator Animate9;
 
-    int FadeState = 1;
+    int FadeState = 3;
     void Start()
     {
         detectToggle = GameObject.Find("ScriptHolder").GetComponent<DetectToggle>();
@@ -45,28 +45,30 @@ public class Simulate : MonoBehaviour
 
     public void transition_state(string user_input)
     {
+        int cursor = 0;
         if(detectToggle.Toggle1.isOn)
         {
             user_input = user_Input.text;
-        
-            int cursor = 0;
+         
          foreach (char x in user_input)
             {
+             cursor = 0;
              switch (cursor)
              {
                  case 0:
                      Debug.Log("Initial State");
                      if (cursor < user_input.Length - 1)
                      {
+                        StartCoroutine(DelayAnimation(1,anim,"DFA1S1",FadeState));
                           if (user_input[cursor] == 'a')
                             {  
-                                StartCoroutine(DelayAnimation(1,anim,"DFA1S1",FadeState));
+                                StartCoroutine(DelayAnimation(2,anim2,"DFA2S1",FadeState));
                                 cursor++;
                                 goto case 1;
                             }
                             else if (user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(1,anim,"DFA1S1",FadeState));
+                                StartCoroutine(DelayAnimation(2,anim3,"DFA3S1",FadeState));
                                 cursor++;
                                 goto case 2;
                             }
@@ -90,14 +92,14 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(2,anim2,"DFA2S1",FadeState));
+                                StartCoroutine(DelayAnimation(3,anim4,"DFA4S1",FadeState));
                                 //anim2.SetBool("DFA2S1",true);
                                 cursor++;
                                 goto case 3;
                             }
                             else if (user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(2,anim2,"DFA2S1",FadeState));
+                                StartCoroutine(DelayAnimation(3,anim3,"DFA3S1",FadeState));
                                 //anim2.SetBool("DFA2S1",true);
                                 cursor++;
                                 goto case 2;
@@ -122,7 +124,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(3,anim3,"DFA3S1",FadeState));
+                                StartCoroutine(DelayAnimation(4,anim4,"DFA4S1",FadeState));
                                 //anim3.SetBool("DFA3S1",true);
                                 cursor++;
                                 goto case 3;
@@ -147,13 +149,13 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(4,anim4,"DFA4S1",FadeState));
+                                StartCoroutine(DelayAnimation(5,anim5,"DFA5S1",FadeState));
                                 cursor++;
                                 goto case 4;
                             }
                             else if (user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(4,anim4,"DFA4S1",FadeState));
+                                StartCoroutine(DelayAnimation(5,anim6,"DFA6S1",FadeState));
                                 cursor++;
                                 goto case 5;
                             }
@@ -177,13 +179,13 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(5,anim5,"DFA5S1",FadeState));
+                                StartCoroutine(DelayAnimation(6,anim7,"DFA7S1",FadeState));
                                 cursor++;
                                 goto case 6;
                             }
                             else if (user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(5,anim5,"DFA5S1",FadeState));
+                                StartCoroutine(DelayAnimation(6,anim6,"DFA6S1",FadeState));
                                 cursor++;
                                 goto case 5;
                             }
@@ -207,13 +209,13 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(6,anim6,"DFA6S1",FadeState));
+                                StartCoroutine(DelayAnimation(7,anim5,"DFA5S1",FadeState));
                                 cursor++;
                                 goto case 4;
                             }
                             else if (user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(6,anim6,"DFA6S1",FadeState));
+                                StartCoroutine(DelayAnimation(7,anim7,"DFA7S1",FadeState));
                                 cursor++;
                                 goto case 6;
                             }
@@ -237,7 +239,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(7,anim7,"DFA7S1",FadeState));
+                                StartCoroutine(DelayAnimation(8,anim8,"DFA8S1",FadeState));
                                 cursor++;
                                 goto case 7;
                             }
@@ -262,7 +264,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
                             {
-                                StartCoroutine(DelayAnimation(8,anim8,"DFA8S1",FadeState));
+                                StartCoroutine(DelayAnimation(9,anim8,"DFA8S1",FadeState));
                                 cursor++;
                                 goto case 7;
                             }
@@ -305,13 +307,14 @@ public class Simulate : MonoBehaviour
 // ITEM 2 
     public void transition_state_number(string user_input)
     {
+         int cursor = 0;
         if(detectToggle.Toggle2.isOn)
         {
             user_input = user_Input.text;
         
-            int cursor = 0;
          foreach (char x in user_input)
             {
+            cursor = 0;   
              switch (cursor)
              {
                  case 0:
@@ -596,10 +599,10 @@ public class Simulate : MonoBehaviour
     
     
     IEnumerator DelayAnimation (int secDelay, Animator anim, string State,int FadeState) 
-     {  
+    {  
         yield return new WaitForSeconds(secDelay);
         anim.SetBool(State,true);
         yield return new WaitForSeconds(FadeState);
         anim.SetBool(State,false);
-     }
+    }
 }

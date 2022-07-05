@@ -19,13 +19,15 @@ public class DFA : MonoBehaviour
 
     public void transition_state(string user_input)
     {
+        int cursor = 0;
         if(detectToggle.Toggle1.isOn)
         {
             user_input = user_Input.text;
         
-            int cursor = 0;
+         cursor = 0;
          foreach (char x in user_input)
             {
+             
              switch (cursor)
              {
                  case 0:
@@ -279,13 +281,13 @@ public class DFA : MonoBehaviour
 // ITEM 2 
     public void transition_state_number(string user_input)
     {
+        int cursor = 0;
         if(detectToggle.Toggle2.isOn)
         {
             user_input = user_Input.text;
-        
-            int cursor = 0;
          foreach (char x in user_input)
             {
+             cursor = 0;   
              switch (cursor)
              {
                  case 0:
