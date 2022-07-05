@@ -13,6 +13,7 @@ public class CanvasScript : MonoBehaviour
         panels[2].SetActive(false);
         panels[3].SetActive(true);
         panels[4].SetActive(false);
+        panels[5].SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,7 +27,8 @@ public class CanvasScript : MonoBehaviour
         panels[0].SetActive(false);
         panels[1].SetActive(false);
         panels[2].SetActive(false);
-        panels[4].SetActive(false);   
+        panels[4].SetActive(false);  
+        panels[5].SetActive(false); 
     }
 
     public void DFABtn(){
@@ -35,6 +37,7 @@ public class CanvasScript : MonoBehaviour
         panels[2].SetActive(false);
         panels[3].SetActive(false);
         panels[4].SetActive(false);
+        panels[5].SetActive(false);
     }
 
     public void CFGBtn(){
@@ -43,6 +46,7 @@ public class CanvasScript : MonoBehaviour
         panels[2].SetActive(false);
         panels[3].SetActive(false);
         panels[4].SetActive(false);
+        panels[5].SetActive(false);
     }
 
     public void PDABtn(){
@@ -51,5 +55,6 @@ public class CanvasScript : MonoBehaviour
         panels[1].SetActive(false);
         panels[3].SetActive(false);
         panels[4].SetActive(false);
+        panels[5].SetActive(false);
     }
 }
