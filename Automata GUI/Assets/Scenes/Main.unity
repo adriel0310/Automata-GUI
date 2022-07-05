@@ -3939,7 +3939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.105882354, g: 0.105882354, b: 0.105882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3947,98 +3947,113 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9a4a5490568878f468987aea83674e9a, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Product Name -  Automata GUI
+  m_Text: 'Automata GUI is a compiler that displays the following:
 
-    Product Functions - Displays the Regular
-    Expression, Context Free Grammar, Definite Finite Automaton, and Pushdown Automata
-    (which will now be referred to as RegEx, CFG, DFA, and PDA respectively) of the
-    following given (which will now be referred to as Given 1 and Given 2):
+    - Regular
+    Expression (RegEx)
 
-    (
-    b + aa + ab ) ( a + b )* ( bb + aba + ab )* ( aaa + bbb ) ( a + b ) ( a + b +
-    ab )*
+    - Context Free Grammar (CFG)
 
-    ( 1 + 0 )* (11 + 00 + 101 + 010) ( 1 + 0 + 11 + 00 + 101 )* ( 11
-    + 00 ) ( 11+ 00 + 101 )* ( 1 + 0 ) ( 1 + 0 + 11 )*
+    - Definite Finite Automaton
+    (DFA)
 
-    
+    - Pushdown Automata (PDA) of the following given:
 
-    Product Instructions
+    1.) ( b + aa
+    + ab ) ( a + b )* ( bb + aba + ab )* ( aaa + bbb ) ( a + b ) ( a + b + ab )*
 
-
-    To
-    validate inputs for Regular Expression
-
-    Choose a given first.
-
-    Once
-    the User has chosen a given, click on the textbox in the middle and input the
-    string the User wants to validate.
-
-    Click execute to validate. If valid,
-    the compiler will indicate valid, otherwise it will indicate invalid in the text
-    beside the textbox
+    2.)
+    ( 1 + 0 )* (11 + 00 + 101 + 010) ( 1 + 0 + 11 + 00 + 101 )* ( 11 + 00 ) ( 11+
+    00 + 101 )* ( 1 + 0 ) ( 1 + 0 + 11 )*
 
 
-    To view Definite Finite Automata
 
-    Choose a given
-    first.
-
-    Once the User has chosen the given, click on the DFA button located
-    below the given.
-
-    Once it has been clicked, the DFA of the given will be
-    displayed.
+    HOW TO USE:
 
 
+    1. To validate
+    inputs for Regular Expression
+
+    - Choose a given first.
+
+    - Once the User
+    has chosen a given, click on the textbox in the middle and input the string the
+    User wants to validate.
+
+    - Click execute to validate. If valid, the compiler
+    will indicate valid, otherwise it will indicate invalid in the text beside the
+    textbox
+
+
+    2. To view Definite Finite Automata
+
+    - Choose a given first.
+
+    -
+    Once the User has chosen the given, click on the DFA button located below the
+    given.
+
+    - Once it has been clicked, the DFA of the given will be displayed.
+
+
+    3.
     To view the Context-Free Grammar
 
-    Choose a given first.
+    - Choose a given first.
 
-    Once
-    the User has chosen the given, click on the CFG button located below the given.
+    - Once the
+    User has chosen the given, click on the CFG button located below the given.
 
-    Once
-    it has been clicked, the CFG of the given will be displayed.
-
-
-    To view the
-    Pushdown Automata
-
-    Choose a given first.
-
-    Once the User has chosen
-    the given, click on the PDA button located below the given.
-
-    Once it has
-    been clicked, the PDA of the given will be displayed.
+    -
+    Once it has been clicked, the CFG of the given will be displayed.
 
 
-    Product Warning
+    4. To
+    view the Pushdown Automata
 
-    The
-    User needs to select a given else the program considers as an error and will
-    ask the User to choose again before interacting with anything else of the program.
+    - Choose a given first.
 
-    In
-    order to view the different given items''s DFA, CFG, and PDA when changing from
-    one given to another, the User must click again on the corresponding buttons
-    for DFA, CFG, and PDA depending on which one of those the User wants to see.
+    - Once the User
+    has chosen the given, click on the PDA button located below the given.
 
-'
+    -
+    Once it has been clicked, the PDA of the given will be displayed.
+
+
+    WARNING:
+
+    -
+    Before allowing the user to interact with any other part of the program, the
+    program will ask the user to choose again if they fail to make a required selection.
+
+    -
+    The user must click the corresponding buttons for DFA, CFG, and PDA again depending
+    on which of those they want to view in order to view the DFA, CFG, and PDA of
+    the various given items when switching from one given to another.
+
+
+    Compiler
+    made by:
+
+    Janna Arcullo
+
+    Ivan Avelino
+
+    Adriel Grafilo
+
+    Jose Javier'
 --- !u!222 &969132168
 CanvasRenderer:
   m_ObjectHideFlags: 0
