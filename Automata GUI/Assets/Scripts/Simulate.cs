@@ -30,7 +30,7 @@ public class Simulate : MonoBehaviour
     public Animator Animate8;
     public Animator Animate9;
 
-    int FadeState = 3;
+    int FadeState = 2;
     void Start()
     {
         detectToggle = GameObject.Find("ScriptHolder").GetComponent<DetectToggle>();
@@ -179,7 +179,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(6,anim7,"DFA7S1",FadeState));
+                                StartCoroutine(DelayAnimation(7,anim7,"DFA7S1",FadeState));
                                 cursor++;
                                 goto case 6;
                             }
@@ -209,7 +209,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == 'a')
                             {
-                                StartCoroutine(DelayAnimation(7,anim5,"DFA5S1",FadeState));
+                                StartCoroutine(DelayAnimation(6,anim5,"DFA5S1",FadeState));
                                 cursor++;
                                 goto case 4;
                             }
@@ -298,10 +298,6 @@ public class Simulate : MonoBehaviour
                 }
             }
         } 
-        // else
-        // {
-        //     Debug.Log("Please Click On a Toggle");
-        // }
     }
     
 
@@ -338,15 +334,11 @@ public class Simulate : MonoBehaviour
                             }
                             else
                             {
-                                //Debug.Log("Invalid 0");
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 0 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 1:
@@ -368,15 +360,11 @@ public class Simulate : MonoBehaviour
                             }
                             else
                             {
-                                //Debug.Log("Invalid 1");
-                               //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 1 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 2:
@@ -400,15 +388,11 @@ public class Simulate : MonoBehaviour
 
                             else
                             {
-                                //Debug.Log("Invalid 2");
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 2 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 3:
@@ -424,15 +408,11 @@ public class Simulate : MonoBehaviour
                             }
                             else
                             {
-                                //Debug.Log("Invalid 3");
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 3 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 4:
@@ -454,15 +434,11 @@ public class Simulate : MonoBehaviour
                             }
                             else
                             {
-                                //Debug.Log("Invalid 4");
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 4 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 5:
@@ -472,27 +448,23 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(7,Animate8,"DFA8S2",FadeState));
+                                StartCoroutine(DelayAnimation(8,Animate8,"DFA8S2",FadeState));
                                 cursor++;
                                 goto case 7;
                             }
                             else if (user_input[cursor] == '0')
                             {
-                                StartCoroutine(DelayAnimation(7,Animate7,"DFA7S2",FadeState));
+                                StartCoroutine(DelayAnimation(6,Animate7,"DFA7S2",FadeState));
                                 cursor++;
                                 goto case 6;
                             }
                             else
                             {
-                                //Debug.Log("Invalid 5");
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 5 outside");
-                            //ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 6:
@@ -502,7 +474,7 @@ public class Simulate : MonoBehaviour
 
                             if (user_input[cursor] == '1')
                             {
-                                StartCoroutine(DelayAnimation(8,Animate6,"DFA6S2",FadeState));
+                                StartCoroutine(DelayAnimation(7,Animate6,"DFA6S2",FadeState));
                                 cursor++;
                                 goto case 5;
                             }
@@ -582,22 +554,15 @@ public class Simulate : MonoBehaviour
                             }
                             else
                             {
-                                //ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         break;
                     default:
-                        //Debug.Log("Invalid End");
-                        //ValidityCheck.text = "Invalid End";
                         break;
                 }
             }
         } 
-        // else
-        // {
-        //     //Debug.Log("Please Click On a Toggle");
-        // }
     }
     
     
