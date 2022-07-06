@@ -32,7 +32,7 @@ public class DFA : MonoBehaviour
              {
                  case 0:
                      Debug.Log("Initial State");
-                     if (cursor < user_input.Length - 1)
+                     if (cursor < user_input.Length)
                      {
                           if (user_input[cursor] == 'a')
                             {  
@@ -61,7 +61,7 @@ public class DFA : MonoBehaviour
                         }
                     case 1:
                         Debug.Log("State 2");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -93,7 +93,7 @@ public class DFA : MonoBehaviour
                         }
                     case 2:
                         Debug.Log("State 3");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
@@ -118,7 +118,7 @@ public class DFA : MonoBehaviour
                         }
                     case 3:
                         Debug.Log("State 4");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -148,7 +148,7 @@ public class DFA : MonoBehaviour
                         }
                     case 4:
                         Debug.Log("State 5");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -178,7 +178,7 @@ public class DFA : MonoBehaviour
                         }
                     case 5:
                         Debug.Log("State 6");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -208,6 +208,7 @@ public class DFA : MonoBehaviour
                         }
                     case 6:
                         Debug.Log("State 7");
+                        cursor--;
                         if (cursor < user_input.Length - 1)
                         {
 
@@ -281,30 +282,34 @@ public class DFA : MonoBehaviour
 // ITEM 2 
     public void transition_state_number(string user_input)
     {
-        int cursor = 0;
+        
         if(detectToggle.Toggle2.isOn)
         {
             user_input = user_Input.text;
+            int cursor = 0;
          foreach (char x in user_input)
             {
-             cursor = 0;   
+               
              switch (cursor)
              {
                  case 0:
-                     Debug.Log("Initial State");
-                     if (cursor < user_input.Length - 1)
+                    Debug.Log("Initial State");
+                    Debug.Log("Cursor: " + cursor);
+                    Debug.Log("User Input Length " + user_input.Length);
+                     if (cursor < user_input.Length)
                      {
-
                           if (user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 1;
                             }
-                            else if (user_input[cursor] == '1')
+                            if (user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 2;
                             }
                             else
@@ -322,19 +327,23 @@ public class DFA : MonoBehaviour
                         }
                     case 1:
                         Debug.Log("State 2");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("Cursor: " + cursor);
+                        Debug.Log("User Input Length " + user_input.Length);
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(2,Animate2,"DFA2S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 4;
                             }
-                            else if (user_input[cursor] == '1')
+                            if (user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(2,Animate2,"DFA2S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 3;
                             }
                             else
@@ -352,20 +361,24 @@ public class DFA : MonoBehaviour
                         }
                     case 2:
                         Debug.Log("State 3");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("Cursor: " + cursor);
+                        Debug.Log("User Input Length " + user_input.Length);
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '0' )
                             {
                                 //StartCoroutine(DelayAnimation(3,Animate3,"DFA3S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 3;
                             }
 
-                            else if(user_input[cursor] == '1')
+                            if(user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(3,Animate3,"DFA3S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 4; 
                             }
 
@@ -384,13 +397,16 @@ public class DFA : MonoBehaviour
                         }
                     case 3:
                         Debug.Log("State 4");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("Cursor: " + cursor);
+                        Debug.Log("User Input Length " + user_input.Length);
+                        if (cursor < user_input.Length)
                         {
 
-                            if (user_input[cursor] == '1' || user_input[cursor] == '0')
+                            if (user_input[cursor] == '0' || user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(4,Animate4,"DFA4S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 4;
                             }
                             else
@@ -408,19 +424,23 @@ public class DFA : MonoBehaviour
                         }
                     case 4:
                         Debug.Log("State 5");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("Cursor: " + cursor);
+                        Debug.Log("User Input Length " + user_input.Length);
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(5,Animate5,"DFA5S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 5;
                             }
-                            else if (user_input[cursor] == '0')
+                            if (user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(5,Animate5,"DFA5S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 6;
                             }
                             else
@@ -438,54 +458,62 @@ public class DFA : MonoBehaviour
                         }
                     case 5:
                         Debug.Log("State 6");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("User Input Length " + user_input.Length);
+                        Debug.Log("Cursor: " + cursor);
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(6,Animate6,"DFA6S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 7;
                             }
-                            else if (user_input[cursor] == '0')
+                            if (user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(6,Animate6,"DFA6S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 6;
                             }
                             else
                             {
-                                //Debug.Log("Invalid 5");
+                                Debug.Log("Invalid 5");
                                 ValidityCheck.text = "Invalid";
                                 return;
                             }
                         }
                         else
                         {
-                            //Debug.Log("Invalid 5 outside");
+                            Debug.Log("Invalid 5 outside");
                             ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 6:
                         Debug.Log("State 7");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("Cursor: " + cursor);
+                        Debug.Log("User Input Length " + user_input.Length);
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
                             {
                                 //StartCoroutine(DelayAnimation(7,Animate7,"DFA7S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 5;
                             }
                             if (user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(7,Animate7,"DFA7S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
                                 goto case 7;
                             }
                             else
                             {
-                                //Debug.Log("Invalid 6");
+                                Debug.Log("Invalid 6");
                                 ValidityCheck.text = "Invalid";
                                 
                                 return;
@@ -493,13 +521,16 @@ public class DFA : MonoBehaviour
                         }
                         else
                         {
-                            //Debug.Log("Invalid 6 outside");
+                            Debug.Log("Invalid 6 outside");
                             ValidityCheck.text = "Invalid";
                             return;
                         }
                     case 7:
+                        cursor--;
                         Debug.Log("State 8");
-                        if (cursor < user_input.Length - 1)
+                        Debug.Log("User Input Length " + user_input.Length);
+                        Debug.Log("Cursor: " + cursor);
+                        if (cursor < user_input.Length- 1)
                         {
 
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
@@ -507,32 +538,37 @@ public class DFA : MonoBehaviour
                                //StartCoroutine(DelayAnimation(8,Animate8,"DFA8S2",FadeState));
                                 cursor++;
                                 goto case 8;
+
                             }
                             else
                             {
-                                //Debug.Log("Invalid 6");
+                                Debug.Log("Invalid 7");
                                 ValidityCheck.text = "Invalid";
                                 
                                 return;
                             }
                         }
                         else
-                        {
-                            //Debug.Log("Invalid 6 outside");
-                            ValidityCheck.text = "Invalid";
-                            return;
-                        }
+                             {
+                                Debug.Log("Invalid 7 outside");
+                                ValidityCheck.text = "Invalid";
+                                return;
+                             }
 
                     case 8:
                         Debug.Log("State 9");
+                        Debug.Log("User Input Length " + user_input.Length);
+                        Debug.Log("Cursor: " + cursor);
                         if (cursor < user_input.Length - 1)
                         {
-
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
                             {
                                 //StartCoroutine(DelayAnimation(9,Animate9,"DFA9S2",FadeState));
                                 cursor++;
+                                Debug.Log("Cursor: " + cursor);
+                                ValidityCheck.text = "Valid";
                                 goto case 8;
+                              
                             }
                             else
                             {
@@ -540,13 +576,13 @@ public class DFA : MonoBehaviour
                                 return;
                             }
                         }
-                        else if (cursor == user_input.Length - 1)
+                        if (cursor == user_input.Length - 1)
                         {
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
                             {
-                                ValidityCheck.text = "Valid";
                                 Debug.Log("Cursor: " + cursor);
                                 //Debug.Log("Valid");
+                                ValidityCheck.text = "Valid";
                                 return;
                             }
                             else
@@ -555,7 +591,7 @@ public class DFA : MonoBehaviour
                                 return;
                             }
                         }
-                        break;
+                    break;
                     default:
                         //Debug.Log("Invalid End");
                         ValidityCheck.text = "Invalid End";

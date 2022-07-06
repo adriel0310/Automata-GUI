@@ -57,7 +57,7 @@ public class Simulate : MonoBehaviour
              {
                  case 0:
                      Debug.Log("Initial State");
-                     if (cursor < user_input.Length - 1)
+                     if (cursor < user_input.Length)
                      {
                         StartCoroutine(DelayAnimation(1,anim,"DFA1S1",FadeState));
                           if (user_input[cursor] == 'a')
@@ -87,7 +87,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 1:
                         Debug.Log("State 2");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -119,7 +119,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 2:
                         Debug.Log("State 3");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a' || user_input[cursor] == 'b')
@@ -144,7 +144,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 3:
                         Debug.Log("State 4");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -174,7 +174,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 4:
                         Debug.Log("State 5");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -204,7 +204,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 5:
                         Debug.Log("State 6");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == 'a')
@@ -233,6 +233,7 @@ public class Simulate : MonoBehaviour
                             return;
                         }
                     case 6:
+                        cursor--;
                         Debug.Log("State 7");
                         if (cursor < user_input.Length - 1)
                         {
@@ -307,19 +308,19 @@ public class Simulate : MonoBehaviour
 // ITEM 2 
     public void transition_state_number(string user_input)
     {
-         int cursor = 0;
+         
         if(detectToggle.Toggle2.isOn)
         {
             user_input = user_Input.text;
-        
+         int cursor = 0;
          foreach (char x in user_input)
             {
-            cursor = 0;   
+             cursor = 0;   
              switch (cursor)
              {
                  case 0:
                      Debug.Log("Initial State");
-                     if (cursor < user_input.Length - 1)
+                     if (cursor < user_input.Length)
                      {
                          StartCoroutine(DelayAnimation(1,Animate,"DFA1S2",FadeState));
 
@@ -350,7 +351,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 1:
                         Debug.Log("State 2");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '0')
@@ -380,7 +381,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 2:
                         Debug.Log("State 3");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '0')
@@ -412,7 +413,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 3:
                         Debug.Log("State 4");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1' || user_input[cursor] == '0')
@@ -436,7 +437,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 4:
                         Debug.Log("State 5");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
@@ -466,7 +467,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 5:
                         Debug.Log("State 6");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
@@ -496,7 +497,7 @@ public class Simulate : MonoBehaviour
                         }
                     case 6:
                         Debug.Log("State 7");
-                        if (cursor < user_input.Length - 1)
+                        if (cursor < user_input.Length)
                         {
 
                             if (user_input[cursor] == '1')
@@ -526,6 +527,7 @@ public class Simulate : MonoBehaviour
                             return;
                         }
                     case 7:
+                        cursor--;
                         Debug.Log("State 8");
                         if (cursor < user_input.Length - 1)
                         {
@@ -574,7 +576,7 @@ public class Simulate : MonoBehaviour
                             {
                                 StartCoroutine(DelayAnimation(11,Animate9,"DFA9S2",FadeState));
                                 //ValidityCheck.text = "Valid";
-                                //Debug.Log("Cursor: " + cursor);
+                                 Debug.Log("Cursor: " + cursor);
                                 //Debug.Log("Valid");
                                 return;
                             }
